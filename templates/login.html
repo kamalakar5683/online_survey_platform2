@@ -1,0 +1,161 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Login</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{% static 'css/carousel/carousel.css' %}" rel="stylesheet">
+  <style>
+    /* CUSTOM STYLES FOR LOGIN FORM */
+    
+
+    body {
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      overflow: hidden;
+    }
+    .login-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      padding: 30px;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .login-form h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+    .login-form .form-group {
+      margin-bottom: 1.5rem;
+    }
+    .login-form .btn {
+      background: #6e8efb;
+      border: none;
+    }
+    .login-form .btn:hover {
+      background: #5a75f1;
+    }
+    .login-form ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .login-form ul li {
+      margin-bottom: 1.5rem;
+    }
+    .btn-group {
+      display: flex;
+      justify-content: space-between;
+    }
+    .btn-group .btn {
+      width: calc(50% - 5px);
+    }
+    .widget {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.5);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      animation: float 10s infinite;
+    }
+    .widget.small {
+      width: 50px;
+      height: 50px;
+      animation-duration: 8s;
+    }
+    .widget.medium {
+      width: 100px;
+      height: 100px;
+      animation-duration: 12s;
+    }
+    .widget.large {
+      width: 150px;
+      height: 150px;
+      animation-duration: 15s;
+    }
+    .widget-1 {
+      top: 20px;
+      left: 20px;
+      animation-direction: alternate;
+    }
+    .widget-2 {
+      top: 50%;
+      left: -50px;
+      transform: translateY(-50%);
+      animation-direction: alternate-reverse;
+    }
+    .widget-3 {
+      bottom: 20px;
+      right: 20px;
+      animation-direction: alternate;
+    }
+    @keyframes float {
+      0% {
+        transform: translateY(0) translateX(0);
+      }
+      50% {
+        transform: translateY(-20px) translateX(20px);
+      }
+      100% {
+        transform: translateY(0) translateX(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="widget small widget-1"></div>
+  <div class="widget medium widget-2"></div>
+  <div class="widget large widget-3"></div>
+
+  <div class="login-wrapper">
+    <div class="login-form">
+      <h2>User Login</h2>
+
+      <div class="error-messages">
+        {% for message in messages %}
+          <p class="error-message" style="color: red;">{{ message }}</p>
+        {% endfor %}
+      </div>
+
+      <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        <ul>
+          <li class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" id="username" name="username" required>
+          </li>
+          <li class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+          </li>
+        </ul>
+        <div class="btn-group">
+          <input type="submit" class="btn btn-primary" value="Login">
+          <a class="btn btn-primary" href="{% url 'register' %}">Register</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script>
+form.addEventListener('submit',e=>{
+e.preventDefault()
+fetch(scriptURL,{method:'POST',body:new FormData(form)})
+.then(response=>alert("thank you!your form is submitted succefully."))
+.then(()=>{window.location.reload();})
+.catch(error=>console.error('Error!',error.message))})
+</script>
+</body>
+</html>

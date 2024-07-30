@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Online Survey</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #005f73;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.about-us {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-us h2 {
+    color: #005f73;
+}
+
+.team {
+    margin-top: 40px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    margin: 20px;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #005f73;
+}
+
+footer {
+    background-color: #005f73;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Us</h1>
+    </header>
+    <section class="about-us">
+        <h2>Welcome to Our Online Survey Platform</h2>
+        <p>Our mission is to provide an easy-to-use and reliable platform for gathering valuable feedback through online surveys. We are dedicated to helping businesses and organizations understand their audience better.</p>
+        <div class="team">
+            <h2>Meet Our Team</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="https://img.freepik.com/free-photo/bohemian-man-with-his-arms-crossed_1368-3542.jpg?t=st=1718281908~exp=1718285508~hmac=f4ceaff0318332a7907550baf63e002dccb459befafdec03a2e2cc42e5443687&w=740" alt="Team Member 1">
+                    <p>John Doe</p>
+                    <p>CEO</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://img.freepik.com/free-photo/closeup-shot-laughing-male-model-outside-sun-rays_181624-53325.jpg?t=st=1718281940~exp=1718285540~hmac=a9d4036d928ee891dd6c4c6742b4025842fcac22e67f5f6485991b9268338aab&w=360" alt="Team Member 2">
+                    <p>Jane Smith</p>
+                    <p>CTO</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://img.freepik.com/free-photo/smiling-young-man-beach_23-2147645587.jpg?t=st=1718281977~exp=1718285577~hmac=f6dd328121e69db932883a85a93f52fba15b64c647c180c41a429d7b31ae8f1b&w=360" alt="Team Member 3">
+                    <p>Michael Brown</p>
+                    <p>COO</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Online Survey. All rights reserved.</p>
+    </footer>
+<script>
+    // script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const teamMembers = document.querySelectorAll('.team-member img');
+
+    teamMembers.forEach(member => {
+        member.addEventListener('mouseover', () => {
+            member.style.transform = 'scale(1.1)';
+            member.style.transition = 'transform 0.3s';
+        });
+
+        member.addEventListener('mouseout', () => {
+            member.style.transform = 'scale(1)';
+        });
+    });
+});
+
+</script>
+</body>
+</html>

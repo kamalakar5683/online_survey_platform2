@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Population Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Population Survey Form</h1>
+        <form id="survey-form" name="contact-form">
+            <div class="form-section">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-section">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="0" required>
+            </div>
+
+            <div class="form-section">
+                <label>Gender:</label>
+                <div>
+                    <input type="radio" id="gender-male" name="gender" value="male" required>
+                    <label for="gender-male">Male</label>
+                </div>
+                <div>
+                    <input type="radio" id="gender-female" name="gender" value="female">
+                    <label for="gender-female">Female</label>
+                </div>
+                <div>
+                    <input type="radio" id="gender-other" name="gender" value="other">
+                    <label for="gender-other">Other</label>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <label for="occupation">Occupation:</label>
+                <input type="text" id="occupation" name="occupation" required>
+            </div>
+
+            <div class="form-section">
+                <label>Do you own a house?</label>
+                <div>
+                    <input type="radio" id="house-yes" name="house" value="yes" required>
+                    <label for="house-yes">Yes</label>
+                </div>
+                <div>
+                    <input type="radio" id="house-no" name="house" value="no">
+                    <label for="house-no">No</label>
+                </div>
+            </div>
+
+            <div class="form-section" id="house-details" style="display: none;">
+                <label for="house-size">Size of House (in square feet):</label>
+                <input type="number" id="house-size" name="house-size" min="0">
+            </div>
+
+            <div class="form-section">
+                <label for="reason-no-house">If you don't own a house, please specify the reason:</label>
+                <textarea id="reason-no-house" name="reason-no-house" rows="4" style="display: none;"></textarea>
+            </div>
+
+            <div class="form-section">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.form-section {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+    </style>
+<script>
+    const scriptURL='https://script.google.com/macros/s/AKfycbzzPAtu3Nl6jgk94iNuX4czJvqyL5tsh_JG7J003vNHCSbbj6NOgtFamZqFz7nPxwMB/exec'
+const form =document.forms['contact-form']
+form.addEventListener('submit',e=>{
+    e.preventDefault()
+    fetch(scriptURL,{method:'POST',body:new FormData(form)})
+    .then(response=>alert("thank you!your form is submitted succefully."))
+.then(()=>{window.location.reload();})
+.catch(error=>console.error('Error!',error.message))})
+</script>
+    
+</body>
+</html>
+x

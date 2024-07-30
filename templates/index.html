@@ -1,0 +1,757 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .navbar {
+    background-color: #dee3e8 !important; /* Navbar background color */
+  
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+    padding-right:1000px;
+    
+  }
+
+  
+  .navbar-nav .nav-link {
+    color: #ffffff !important; /* Navbar link color */
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #21edc1 !important; /* Navbar link hover color */
+  }
+  .car1{
+   /* border: 1px solid black;*/
+    border-radius: 23px;
+    /*color: rgb(127, 129, 255);*/
+    margin: 40px;
+    background-color: #ffffff;
+    height: 400px;
+    width: 1800px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    padding: 70px;
+    margin-bottom: 400px;
+
+  }
+  .car2{
+     border-radius: 23px;
+     color: rgb(127, 129, 255);
+     margin: 40px;
+    /* background-image: url(https://img.freepik.com/free-photo/wooden-wood-backgrounds-textured-pattern-wallpaper-concept_53876-14103.jpg?w=900&t=st=1716456908~exp=1716457508~hmac=8773d636a176c799a67e3663acde5ae396f441399680ff545087ded02062dfd8);
+    background-size: cover;*/
+     background-color: #ffffff;
+     height: 700px;
+     width: 100%;
+     display: flex;
+    flex-direction: row;
+    
+   }
+
+   .car3{
+    /* border: 1px solid black;*/
+     border-radius: 23px;
+     color: rgb(127, 255, 170);
+     margin: 40px;
+   background-image: url(https://img.freepik.com/free-photo/blue-abstract-layered-stripes-background_53876-104039.jpg?w=900&t=st=1716383434~exp=1716384034~hmac=e062b7ca28a7fa9265761637a8f7041e3a03f4258bc62b3e758113ff52a81b49);
+     height: 800px;
+     width: 1800px;
+     background-size: cover;
+   }
+   .he{
+    font-family: "Poetsen One", sans-serif;
+    font-size: 70px;
+   }
+   .pe{
+    font-size: 40px;
+    font-family: "Oswald", sans-serif;
+
+   }
+   .c1{
+    width: 1200px;
+   }
+   body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+   .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5px auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    /* Position it in the top right corner outside of the modal */
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  /* Close button on hover */
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+  }
+  
+  @keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+  }
+
+  body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+
+/*signup*/
+body {font-family: Arial, Helvetica, sans-serif;}
+      
+      /* Full-width input fields */
+      input[type=text], input[type=password], input[type=email] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+      
+      /* Set a style for all buttons */
+      .signup-btn {
+        background-color: #04AA6D;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+      }
+      
+      .signup-btn:hover {
+        opacity: 0.8;
+      }
+      
+      /* Extra styles for the cancel button */
+      .signup-cancelbtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color: #f44336;
+      }
+      
+      /* Center the image and position the close button */
+      .signup-imgcontainer {
+        text-align: center;
+        margin: 24px 0 12px 0;
+        position: relative;
+      }
+      
+      .signup-avatar {
+        width: 40%;
+        border-radius: 50%;
+      }
+      
+      .signup-container {
+        padding: 16px;
+      }
+      
+      /* The Modal (background) */
+      .signup-modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        padding-top: 60px;
+      }
+      
+      /* Modal Content/Box */
+      .signup-modal-content {
+        background-color: #fefefe;
+        margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+      }
+      
+      /* The Close Button (x) */
+      .signup-close {
+        position: absolute;
+        right: 25px;
+        top: 0;
+        color: #000;
+        font-size: 35px;
+        font-weight: bold;
+      }
+      
+      .signup-close:hover,
+      .signup-close:focus {
+        color: red;
+        cursor: pointer;
+      }
+      
+      /* Add Zoom Animation */
+      .signup-animate {
+        -webkit-animation: signup-animatezoom 0.6s;
+        animation: signup-animatezoom 0.6s
+      }
+      
+      @-webkit-keyframes signup-animatezoom {
+        from {-webkit-transform: scale(0)} 
+        to {-webkit-transform: scale(1)}
+      }
+        
+      @keyframes signup-animatezoom {
+        from {transform: scale(0)} 
+        to {transform: scale(1)}
+      }
+      
+      /* Change styles for cancel button on extra small screens */
+      @media screen and (max-width: 300px) {
+        .signup-cancelbtn {
+           width: 100%;
+        }
+      }
+      .sig{
+        margin-bottom: 47px;
+        margin-right: 50px;
+      }
+      .he2{
+        
+        height: 700px;
+        width: 600px;
+        color: rgb(85, 11, 203);
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+        font-size: 30px;
+        padding-top: 60px;
+       padding-left: 50px;
+       padding-right: 20px;
+       border-radius: 25px;
+       background-color: rgb(240, 244, 237) ;
+       font-family: "Bebas Neue", sans-serif;
+      }
+.pe2{
+  height: 700px;
+        width: 600px;
+        padding-top: 20px;
+        padding-left: 20px;
+       padding-right: 20px;
+        color: rgb(220, 20, 20);
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+        font-size: 20px;
+        font-family: "Caveat", cursive;
+        border-radius: 25px;
+       background-color: rgba(247, 249, 246, 0.792);
+
+}
+.im2{
+  background-color:rgb(215, 215, 225) ;
+  border-radius: 25px;
+}
+.c3{
+  margin-top: 40px;
+  margin-bottom: 140px;
+  font-size:45px;
+}
+.col1{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
+}
+.side1{
+  margin: 20px;
+  padding: 30px;
+  font-family: "Poetsen One", sans-serif;
+  font-size: xx-large;
+  color: rgb(35, 18, 222);
+  transition: transform 0.3s ease;
+}
+.side1:hover{
+  transform: scale(1.1);
+}
+.cardr{
+  width: 1000px;
+  border-radius: 25px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #ffffff;
+  transition: transform 0.3s ease;
+  
+}
+.cardr:hover{
+  transform: scale(1.1);
+}
+.head2{
+  color: #060c0c;
+}
+.para2{
+  color: rgb(235, 114, 16);
+}
+.car4{
+  border-radius: 23px;
+     margin: 30px;
+     height: auto;
+     padding-top: 10px;
+     padding-bottom:40px ;
+     width: 1800px;
+     background-image: url(https://img.freepik.com/free-vector/white-abstract-wallpaper_23-2148830027.jpg?w=900&t=st=1716448213~exp=1716448813~hmac=9764eafb4e044653ecdd9f47c366e853b7535a9e28b0784c90e1ef4ffe462332);
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+.col2{
+  height:800px;
+  width: 1000px;
+  display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: row;
+
+}
+.cardr2{
+  height: 400pxx;
+  width: 200pxpx;
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.im4{
+  height: 200px;
+  width: 200px;
+  border-radius: 25px;
+}
+.head3{
+  font-size: 60px;
+  margin-left: 30px;
+  font-family: "Freeman", sans-serif;
+}
+.para3{
+  font-size: 22px;
+  margin-top: 90px;
+  margin-right: 90px;
+  margin-left: 10px;
+  font-family: "Source Code Pro", monospace;
+}
+.col2{
+  height: 210px;
+  width: 1000px;
+  border-radius: 25px;
+  margin-left: 450px;
+  margin-top: 70px;
+  padding: 30px;
+  transition: transform 0.3s ease;
+  font-size:30px;
+}
+
+footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  border-radius: 25px;
+
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #ecf0f1;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.footer-links a:hover {
+ transform: scale(1.0) 
+}
+
+.social-media {
+  margin-bottom: 10px;
+}
+
+.social-media a {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.social-media img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-info {
+  font-size: 14px;
+}
+.login-card {
+  max-width: 400px;
+  padding: 30px 40px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  margin-top: 100px;
+
+  /* Center alignment for form elements */
+}
+a.register {
+  float: right;
+}
+
+  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Freeman&family=Oswald:wght@200..700&family=Poetsen+One&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- <link rel="stylesheet" href="he.js"> -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <link href="{% static 'js/he.js' %}" rel="stylesheet" />
+
+    <link
+    rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poetsen+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top bg-dark shadow-sm">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'index' %}">ON-LINE SURWAY</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+            
+  
+            </ul>
+            <div class="d-flex align-items-center">
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                  <a class="nav-link">Services</a>
+              </li>
+                <a href="{% url 'profile' %}" class="btn btn-outline-primary me-2">{{ user.first_name }}</a>
+                <a href="{% url 'logout' %}" class="btn btn-outline-primary me-2">Logout</a>
+                
+                {% else %}
+                <a class="btn btn-outline-primary me-2" id="login" href="{% url 'login' %}">Login</a>
+                <a class="btn btn-outline-primary me-2" id="register" href="{% url 'register' %}">Register</a>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+</nav>
+      
+
+      <section class="car1">
+       
+            <div class="c1"><h1  data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"class="he">Web Survey
+              Made with Ease</h1>
+     <p data-aos="fade-left"
+     data-aos-anchor="#example-anchor"
+     data-aos-offset="500"
+     data-aos-duration="500"class="pe">Gather data. Gain perspective. Garner success</p>
+</div>
+    <div data-aos="zoom-out" class="c2">
+        <img src="https://img.freepik.com/free-vector/organic-flat-feedback-concept_52683-62653.jpg?w=900&t=st=1716191779~exp=1716192379~hmac=6ecf33f5ed32b1fb080c346c56c0279ab83ff781d99b45e0b1fe2ffb119f8c53" alt="">
+        
+        </div>
+        
+      </section>
+    <section data-aos="fade-up"class="car2">
+  <div class="he2">
+  
+    <h1  class="animate__animated animate__bounce" class="c3" data-aos="zoom-in" >
+      <img src="https://img.freepik.com/free-photo/collage-customer-experience-concept_23-2149367141.jpg?t=st=1716458391~exp=1716461991~hmac=57f6901be7175b6b660c746eb3b2146cce2718a85b6ae0b8867a9b1a12ad341d&w=900" alt="" style="height: 300px;width: 400px;margin-bottom: 30px;border-radius: 25px;">
+      Welcome to the Ultimate Survey Adventure! Get ready to revolutionize the way you gather insights
+    </h1>
+  </div>
+  
+  <div class="pe2" data-aos="zoom-in-up">
+    <img src="https://img.freepik.com/free-photo/young-business-woman-checking-satisfaction-checklist-box-copy-space_1258-88647.jpg?t=st=1716458946~exp=1716462546~hmac=4ec02cad3aa187be5fc88c0ae97a5a6a672a99f712768ae707e343dcd6b715db&w=1060" alt="" style="height: 250px;width: 350px;margin-bottom: 30px;padding-left: 70px;border-radius: 15px;"><p>At Surveyify, we believe surveys should be anything but boring. Say goodbye to dull forms and hello to interactive data collection!
+  </p><br><p>Our platform is designed to spark creativity and engagement. Whether you're a newbie or a survey pro, we've got you covered.</p><br><p>Join our community of survey enthusiasts and embark on a journey filled with excitement, innovation, and endless possibilities!</p></div>
+  <div><img class="im2" data-aos="flip-left"  src="https://img.freepik.com/free-photo/survey-results-analysis-discovery-investigation-concept_53876-123732.jpg?t=st=1716457026~exp=1716460626~hmac=f3d7cd189d60b47c23c6879e014c4e19b39d664447f24636c69cbc504d55eccf&w=740"></div>
+    </section>
+    <section data-aos="fade-down"class="car3">
+<div class="col1">
+  <h1  class="side1">Curious Minds Want to Know</h1>
+  <div class="cardr"><h2 class="head2">How do I create a survey?</h2>
+  <p class="para2">Creating a survey is as easy as pie! Simply click on the 'Create' tab, follow the intuitive steps, and voilà, your survey is ready to go!</p></div>
+  <div class="cardr"><h2 class="head2" >Can I customize my surveys?</h2>
+  <p  class="para2">Absolutely! Personalize your surveys with a variety of themes, fonts, and colors to make them uniquely yours.</p></div>
+  <div class="cardr"><h2 class="head2">Is my data secure with Surveyify?</h2><p  class="para2">Rest assured, we take data security seriously. Your information is encrypted and protected with the latest security measures.</p></div>
+  <div class="cardr"><h2 class="head2">How can I share my surveys?</h2><p  class="para2">haring is caring! Share your surveys via email, social media, or embed them on your website to reach a wider audience.</p></div>
+  <div class="cardr"><h2 class="head2">Need help with surveys?</h2><p  class="para2">Our support team is here for you 24/7! Contact us anytime for assistance, tips, or just to share your survey success stories!</p></div>
+</div>
+    </section>
+    <section class="car4"  data-aos="fade-right">
+      <div class="col2"  data-aos="flip-left">
+<span><h2 class="head3">Interactive Surveys</h2></span><br>
+<p class="para3">Engage in surveys like never<br>before with interactive and dynamic questionnaires.Make your voice heard!
+</p>
+<img   class="im4" src="https://r.mobirisesite.com/458832/assets/images/photo-1423666639041-f56000c27a9a.jpeg" alt=""></div>
+<div class="col2" data-aos="flip-right"><img class="im4" src="https://r.mobirisesite.com/458832/assets/images/photo-1454165804606-c3d57bc86b40.jpeg" alt="">
+<h2 class="head3">Real-Time Results</h2><br><p class="para3">Witness the power of instant feedback with real time survey results . see the impact of your opnions immediately!</p></div>
+<div class="col2" data-aos="flip-up"><h2 class="head3">Customized Surveys</h2>
+<p class="para3">Tailor surveys to your preferences and interests. Enjoy personalized survey experiences that cater to you.</p><img  class="im4" src="https://r.mobirisesite.com/458832/assets/images/photo-1613963931023-5dc59437c8a6.jpeg" alt=""></div>
+    </section>
+    <script>
+      AOS.init();
+    </script>
+    
+    
+</body>
+<footer data-aos="fade-left" id="contact">
+  <div class="footer-container">
+    <div class="footer-links">
+      <a href="{%url 'aboutus'%}">About Us</a>
+      <a href="{%url 'contact'%}">Contact</a>
+      <a href="{%url 'privacy'%}">Privacy Policy</a>
+      <a href="{%url 'terms'%}">Terms of Service</a>
+    </div>
+    <div class="social-media">
+      <a href="https://facebook.com" target="_blank">
+        <img   src="data:image/png;base64,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" alt="Facebook" style="border-radius: 40px;">
+      </a>
+      <a href="https://twitter.com" target="_blank">
+        <img src="https://cdn.icon-icons.com/icons2/1753/PNG/512/iconfinder-social-media-applications-6twitter-4102580_113802.png" alt="Twitter" style="border-radius: 40px;">
+      </a>
+      <a href="https://linkedin.com" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1200px-LinkedIn_icon.svg.png" alt="LinkedIn" style="border-radius: 40px;">
+      </a>
+      <a href="https://instagram.com" target="_blank">
+        <img src="data:image/jpeg;base64,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" alt="Instagram"  style="border-radius: 40px;">
+      </a>
+    </div>
+    <div class="footer-info">
+      <p>&copy; Developed By KamalakarMajji.2024 Online Survey. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</html>
