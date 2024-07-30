@@ -1,0 +1,606 @@
+
+    .navbar {
+    background-color: #dee3e8 !important; /* Navbar background color */
+  
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+    padding-right:1000px;
+    
+  }
+
+  
+  .navbar-nav .nav-link {
+    color: #ffffff !important; /* Navbar link color */
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #21edc1 !important; /* Navbar link hover color */
+  }
+  .car1{
+   /* border: 1px solid black;*/
+    border-radius: 23px;
+    /*color: rgb(127, 129, 255);*/
+    margin: 40px;
+    background-color: #ffffff;
+    height: 400px;
+    width: 1800px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    padding: 70px;
+    margin-bottom: 400px;
+
+  }
+  .car2{
+     border-radius: 23px;
+     color: rgb(127, 129, 255);
+     margin: 40px;
+    /* background-image: url(https://img.freepik.com/free-photo/wooden-wood-backgrounds-textured-pattern-wallpaper-concept_53876-14103.jpg?w=900&t=st=1716456908~exp=1716457508~hmac=8773d636a176c799a67e3663acde5ae396f441399680ff545087ded02062dfd8);
+    background-size: cover;*/
+     background-color: #ffffff;
+     height: 700px;
+     width: 100%;
+     display: flex;
+    flex-direction: row;
+    
+   }
+
+   .car3{
+    /* border: 1px solid black;*/
+     border-radius: 23px;
+     color: rgb(127, 255, 170);
+     margin: 40px;
+   background-image: url(https://img.freepik.com/free-photo/blue-abstract-layered-stripes-background_53876-104039.jpg?w=900&t=st=1716383434~exp=1716384034~hmac=e062b7ca28a7fa9265761637a8f7041e3a03f4258bc62b3e758113ff52a81b49);
+     height: 800px;
+     width: 1800px;
+     background-size: cover;
+   }
+   .he{
+    font-family: "Poetsen One", sans-serif;
+    font-size: 70px;
+   }
+   .pe{
+    font-size: 40px;
+    font-family: "Oswald", sans-serif;
+
+   }
+   .c1{
+    width: 1200px;
+   }
+   body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+   .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5px auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    /* Position it in the top right corner outside of the modal */
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  /* Close button on hover */
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+  }
+  
+  @keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+  }
+
+  body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+
+/*signup*/
+body {font-family: Arial, Helvetica, sans-serif;}
+      
+      /* Full-width input fields */
+      input[type=text], input[type=password], input[type=email] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+      
+      /* Set a style for all buttons */
+      .signup-btn {
+        background-color: #04AA6D;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+      }
+      
+      .signup-btn:hover {
+        opacity: 0.8;
+      }
+      
+      /* Extra styles for the cancel button */
+      .signup-cancelbtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color: #f44336;
+      }
+      
+      /* Center the image and position the close button */
+      .signup-imgcontainer {
+        text-align: center;
+        margin: 24px 0 12px 0;
+        position: relative;
+      }
+      
+      .signup-avatar {
+        width: 40%;
+        border-radius: 50%;
+      }
+      
+      .signup-container {
+        padding: 16px;
+      }
+      
+      /* The Modal (background) */
+      .signup-modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        padding-top: 60px;
+      }
+      
+      /* Modal Content/Box */
+      .signup-modal-content {
+        background-color: #fefefe;
+        margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+      }
+      
+      /* The Close Button (x) */
+      .signup-close {
+        position: absolute;
+        right: 25px;
+        top: 0;
+        color: #000;
+        font-size: 35px;
+        font-weight: bold;
+      }
+      
+      .signup-close:hover,
+      .signup-close:focus {
+        color: red;
+        cursor: pointer;
+      }
+      
+      /* Add Zoom Animation */
+      .signup-animate {
+        -webkit-animation: signup-animatezoom 0.6s;
+        animation: signup-animatezoom 0.6s
+      }
+      
+      @-webkit-keyframes signup-animatezoom {
+        from {-webkit-transform: scale(0)} 
+        to {-webkit-transform: scale(1)}
+      }
+        
+      @keyframes signup-animatezoom {
+        from {transform: scale(0)} 
+        to {transform: scale(1)}
+      }
+      
+      /* Change styles for cancel button on extra small screens */
+      @media screen and (max-width: 300px) {
+        .signup-cancelbtn {
+           width: 100%;
+        }
+      }
+      .sig{
+        margin-bottom: 47px;
+        margin-right: 50px;
+      }
+      .he2{
+        
+        height: 700px;
+        width: 600px;
+        color: rgb(85, 11, 203);
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+        font-size: 30px;
+        padding-top: 60px;
+       padding-left: 50px;
+       padding-right: 20px;
+       border-radius: 25px;
+       background-color: rgb(240, 244, 237) ;
+       font-family: "Bebas Neue", sans-serif;
+      }
+.pe2{
+  height: 700px;
+        width: 600px;
+        padding-top: 20px;
+        padding-left: 20px;
+       padding-right: 20px;
+        color: rgb(220, 20, 20);
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+        font-size: 20px;
+        font-family: "Caveat", cursive;
+        border-radius: 25px;
+       background-color: rgba(247, 249, 246, 0.792);
+
+}
+.im2{
+  background-color:rgb(215, 215, 225) ;
+  border-radius: 25px;
+}
+.c3{
+  margin-top: 40px;
+  margin-bottom: 140px;
+  font-size:45px;
+}
+.col1{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
+}
+.side1{
+  margin: 20px;
+  padding: 30px;
+  font-family: "Poetsen One", sans-serif;
+  font-size: xx-large;
+  color: rgb(35, 18, 222);
+  transition: transform 0.3s ease;
+}
+.side1:hover{
+  transform: scale(1.1);
+}
+.cardr{
+  width: 1000px;
+  border-radius: 25px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #ffffff;
+  transition: transform 0.3s ease;
+  
+}
+.cardr:hover{
+  transform: scale(1.1);
+}
+.head2{
+  color: #060c0c;
+}
+.para2{
+  color: rgb(235, 114, 16);
+}
+.car4{
+  border-radius: 23px;
+     margin: 30px;
+     height: auto;
+     padding-top: 10px;
+     padding-bottom:40px ;
+     width: 1800px;
+     background-image: url(https://img.freepik.com/free-vector/white-abstract-wallpaper_23-2148830027.jpg?w=900&t=st=1716448213~exp=1716448813~hmac=9764eafb4e044653ecdd9f47c366e853b7535a9e28b0784c90e1ef4ffe462332);
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+.col2{
+  height:800px;
+  width: 1000px;
+  display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: row;
+
+}
+.cardr2{
+  height: 400pxx;
+  width: 200pxpx;
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.im4{
+  height: 200px;
+  width: 200px;
+  border-radius: 25px;
+}
+.head3{
+  font-size: 60px;
+  margin-left: 30px;
+  font-family: "Freeman", sans-serif;
+}
+.para3{
+  font-size: 22px;
+  margin-top: 90px;
+  margin-right: 90px;
+  margin-left: 10px;
+  font-family: "Source Code Pro", monospace;
+}
+.col2{
+  height: 210px;
+  width: 1000px;
+  border-radius: 25px;
+  margin-left: 450px;
+  margin-top: 70px;
+  padding: 30px;
+  transition: transform 0.3s ease;
+  font-size:30px;
+}
+
+footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  border-radius: 25px;
+
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #ecf0f1;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.footer-links a:hover {
+ transform: scale(1.0) 
+}
+
+.social-media {
+  margin-bottom: 10px;
+}
+
+.social-media a {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.social-media img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-info {
+  font-size: 14px;
+}
+.login-card {
+  max-width: 400px;
+  padding: 30px 40px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  margin-top: 100px;
+
+  /* Center alignment for form elements */
+}
+a.register {
+  float: right;
+}
